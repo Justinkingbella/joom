@@ -18,6 +18,9 @@ const config = {
       },
     },
     extend: {
+	     aspectRatio: {
+        '4/3': '4 / 3',
+      },
       colors: {
         dark: {
           1: '#1C1F2E',
