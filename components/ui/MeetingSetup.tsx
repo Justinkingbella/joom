@@ -27,18 +27,17 @@ const MeetingSetup = ({setIsSetupComplete}:{setIsSetupComplete: (value: boolean)
 
     }, [isMicCamToggleOn, call?.camera, call?.microphone])
   return (
-    <div className='flex h-screen w-full flex-col 
+  <div className='flex h-screen w-full flex-col 
     items-center justify-center gap-3 text-white'>
-        <h1 className='text-2xl font-bold'>Set up your call before joining</h1>
-        <VideoPreview/>
-        <div className='flex h-16 items-center justify-center gap-3'>
-            <label className='flex items-center justify-center gap-2 font-medium'>
-                <input 
-                type='checkbox'
-                checked={isMicCamToggleOn}
-                onChange={(e) => setIsMicCamToggleOn(e.target.checked)}            
-                />
-                Join with Mic(🎙) and Camera(🎦)  off 😟
+        <h1 className='text-1xl sm:txt-xl font-bold'>Set up your call before joining</h1>
+        <div className="md:flex">
+
+        <VideoPreview className='aspect-video  md:h-full md:w-30 '/>
+        </div>
+        <div className='flex h-16 items-center  justify-between gap-3'>
+            <label className='flex items-center justify-center gap-1 font-medium '>
+                Join with Mic(🎙) and Camera(🎦)  off😟
+                <input type='checkbox'checked={isMicCamToggleOn}onChange={(e) => setIsMicCamToggleOn(e.target.checked)}/>
             </label>
             <DeviceSettings/>
         </div>
